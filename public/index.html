@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareVault — Your Health. Your Records. Your Consent.</title>
+<meta name="description" content="CareVault is a patient-controlled digital health record platform. Organize your records, verify what matters, and share selectively with healthcare providers — only when you choose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23073036'/%3E%3Cpath d='M16 7l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9v-6l7-3z' fill='none' stroke='%2312b091' stroke-width='2.2'/%3E%3Cpath d='M12.5 16h2.2l1.2-2.8 2 5.2 1.3-2.4h1.8' fill='none' stroke='%23ffb45c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home" aria-label="CareVault home">
+      <span class="brand-mark">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 4l9 4v7c0 6-3.9 10.2-9 11.6C10.9 25.2 7 21 7 15V8l9-4z" stroke="#fff" stroke-width="2.4"/><path d="M11.5 16.2h2.4l1.3-3 2.2 5.6 1.4-2.6h2" stroke="#ffb45c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      CareVault
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#how">How It Works</a>
+      <a href="#patients">For Patients</a>
+      <a href="#providers">For Providers</a>
+      <a href="#security">Security</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="/login">Login</a>
+      <a class="btn btn-primary btn-sm" href="/login?signup=1">Get Started <span class="arrow-dot">→</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#how">How It Works</a>
+    <a href="#patients">For Patients</a>
+    <a href="#providers">For Providers</a>
+    <a href="#security">Security</a>
+    <a href="#about">About</a>
+    <a class="btn btn-ghost btn-sm" href="/login">Login</a>
+    <a class="btn btn-primary btn-sm" href="/login?signup=1">Get Started</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow reveal">Patient-controlled health records</p>
+      <h1 class="display reveal d1">Your Health. Your Records. Your Consent.</h1>
+      <p class="lead reveal d2">Keep your health information organized and share the right information with the right healthcare provider — only when you choose.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-primary btn-lg" href="/login?signup=1">Get Started <span class="arrow-dot">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="#how">See How It Works</a>
+      </div>
+      <div class="hero-trust reveal d4">
+        <span class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 9.6C8 19.4 5 15.4 5 11V6l7-3z" stroke="#0e8f7a" stroke-width="2"/></svg> Consent-based sharing</span>
+        <span class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#0e8f7a" stroke-width="2"/><path d="M12 8v4l3 2" stroke="#0e8f7a" stroke-width="2" stroke-linecap="round"/></svg> Time-limited access</span>
+        <span class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M4 6h16M4 18h10" stroke="#0e8f7a" stroke-width="2" stroke-linecap="round"/></svg> Full audit trail</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal d2" aria-hidden="true">
+      <div class="hv-float alert">
+        <span style="font-size:1.3rem">⚠️</span>
+        <div><b style="font-size:.85rem">Allergy: Penicillin</b><br><span class="small muted">Patient verified</span></div>
+      </div>
+      <div class="hv-main">
+        <div class="hv-head">
+          <span class="avatar">RK</span>
+          <div>
+            <b style="font-size:.98rem">Ravi Kumar</b>
+            <div class="small muted">42 · Male · ABHA XX-XXXX-XXXX-1234</div>
+          </div>
+          <span class="badge ok" style="margin-left:auto"><span class="dot ok"></span>Summary ready</span>
+        </div>
+        <div class="hv-row">
+          <div class="hv-card"><div class="k">Medicines</div><div class="v">2 active</div></div>
+          <div class="hv-card"><div class="k">Allergies</div><div class="v">1 verified</div></div>
+          <div class="hv-card"><div class="k">Reports</div><div class="v">3 recent</div></div>
+        </div>
+        <div class="hv-meds">
+          <div class="hv-med"><span>Metformin 500 mg</span><span class="muted">Twice daily</span></div>
+          <div class="hv-med"><span>Amlodipine 5 mg</span><span class="muted">Once daily</span></div>
+        </div>
+        <div class="hv-row">
+          <div class="hv-card" style="background:var(--success-soft)"><div class="k">Consent status</div><div class="v" style="color:var(--success)">● 1 active access</div></div>
+          <div class="hv-card" style="background:var(--blue-soft)"><div class="k">Last visit</div><div class="v">ABC Clinic</div></div>
+        </div>
+      </div>
+      <div class="hv-float qr">
+        <img id="heroQr" alt="" width="104" height="104">
+        <div class="small" style="margin-top:.5rem;font-weight:600">Share securely</div>
+        <div class="small muted">Expires in 30 min</div>
+      </div>
+      <div class="hv-float consent">
+        <div class="small" style="font-weight:700;margin-bottom:.4rem">🔐 Access request</div>
+        <div class="small muted">Dr. Ananya Sharma · ABC Primary Care Clinic</div>
+        <div class="row mt-2" style="gap:.5rem">
+          <span class="btn btn-accent btn-sm" style="flex:1">Allow</span>
+          <span class="btn btn-ghost btn-sm" style="flex:1">Reject</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Consent <i></i> Control <i></i> Continuity <i></i> Clarity <i></i> Traceability <i></i> Privacy <i></i></span>
+    <span>Consent <i></i> Control <i></i> Continuity <i></i> Clarity <i></i> Traceability <i></i> Privacy <i></i></span>
+  </div>
+</div>
+
+<!-- ================= PROBLEM ================= -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">The problem</p>
+      <h2 class="h2 reveal d1">Your medical history shouldn't be scattered.</h2>
+      <p class="lead reveal d2">A patient may move from a primary health centre to a private clinic, a diagnostic centre and a district hospital — and each visit often starts from zero.</p>
+    </div>
+    <div class="flow-grid">
+      <div class="card flow-card reveal"><div class="em">🏥</div><h4>Local Clinic</h4><p>Prescription</p></div>
+      <div class="card flow-card reveal d1"><div class="em">🔬</div><h4>Diagnostic Center</h4><p>Lab Report</p></div>
+      <div class="card flow-card reveal d2"><div class="em">🏨</div><h4>Hospital</h4><p>Discharge Summary</p></div>
+      <div class="card flow-card reveal d3"><div class="em">🙋</div><h4>Patient</h4><p>Medical documents</p></div>
+    </div>
+    <div class="flow-arrow-row reveal">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="#0e8f7a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="flow-merge reveal">
+      <div class="inner">
+        <div class="brand" style="justify-content:center;color:#fff;font-size:1.5rem">
+          <span class="brand-mark" style="background:rgba(255,255,255,.14)">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 4l9 4v7c0 6-3.9 10.2-9 11.6C10.9 25.2 7 21 7 15V8l9-4z" stroke="#fff" stroke-width="2.4"/><path d="M11.5 16.2h2.4l1.3-3 2.2 5.6 1.4-2.6h2" stroke="#ffb45c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          CareVault
+        </div>
+        <h3 class="mt-2">One patient-controlled view of relevant health information.</h3>
+        <p>Helps providers see relevant previous information before making clinical decisions. Repeated history-taking, missing allergy information and scattered reports become far less of a burden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section soft" id="how">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="h2 reveal d1">Four steps. You stay in control at every one.</h2>
+    </div>
+    <div class="steps">
+      <div class="card step-card reveal">
+        <div class="step-num">01</div>
+        <h4>COLLECT</h4>
+        <p>Upload or connect available health records — prescriptions, lab reports, discharge summaries.</p>
+        <div class="step-ic">📥</div>
+      </div>
+      <div class="card step-card reveal d1">
+        <div class="step-num">02</div>
+        <h4>ORGANIZE</h4>
+        <p>AI extracts and organizes information from documents — then you review and verify it.</p>
+        <div class="step-ic">🧠</div>
+      </div>
+      <div class="card step-card reveal d2">
+        <div class="step-num">03</div>
+        <h4>SHARE</h4>
+        <p>Patient chooses what information to share and gives explicit consent through a secure QR.</p>
+        <div class="step-ic">🤝</div>
+      </div>
+      <div class="card step-card reveal d3">
+        <div class="step-num">04</div>
+        <h4>CONTROL</h4>
+        <p>Patient can monitor active access — and revoke it at any time, instantly.</p>
+        <div class="step-ic">🛡️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCT SHOWCASE ================= -->
+<section class="section" id="showcase">
+  <div class="container showcase">
+    <div class="reveal">
+      <p class="eyebrow">Product preview</p>
+      <h2 class="h2">Your complete health summary, in one calm view.</h2>
+      <ul class="checklist">
+        <li class="check-item"><span class="ci">✓</span><div><b>Medicines</b><div class="small muted">Current prescriptions with dose, frequency and source.</div></div></li>
+        <li class="check-item"><span class="ci">✓</span><div><b>Allergies</b><div class="small muted">Patient-verified allergy information, always prominent.</div></div></li>
+        <li class="check-item"><span class="ci">✓</span><div><b>Conditions &amp; reports</b><div class="small muted">Diagnoses and recent lab results with their original documents.</div></div></li>
+        <li class="check-item"><span class="ci">✓</span><div><b>Visit history</b><div class="small muted">A clean timeline of where you've been seen.</div></div></li>
+      </ul>
+      <a class="btn btn-primary mt-3" href="/login">Try the demo <span class="arrow-dot">→</span></a>
+    </div>
+    <div class="reveal d2">
+      <div class="phone">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--muted)"><span>9:41</span><b style="color:var(--ink)">Health Summary</b><span>●●●</span></div>
+        <div class="screen">
+          <div class="ph-row"><b>Ravi Kumar · 42 · Male</b>ABHA XX-XXXX-XXXX-1234</div>
+          <div class="ph-row hl"><b>⚠️ Allergy: Penicillin</b>Patient verified</div>
+          <div class="ph-row"><b>💊 Metformin 500 mg</b>Twice daily · Active</div>
+          <div class="ph-row"><b>💊 Amlodipine 5 mg</b>Once daily · Active</div>
+          <div class="ph-row"><b>🧪 HbA1c — 7.2%</b>15 Sept 2026 · ABC Diagnostics</div>
+          <div class="ph-row"><b>🩺 Type 2 Diabetes</b>Source: ABC Clinic</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PATIENT + PROVIDER ================= -->
+<section class="section soft" id="patients">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Built for both sides of the consultation</p>
+      <h2 class="h2 reveal d1">A better experience for patients and providers.</h2>
+    </div>
+    <div class="split">
+      <div class="card split-card dark-teal reveal">
+        <p class="eyebrow" style="color:var(--accent)">For patients</p>
+        <h3 style="font-size:1.6rem">Carry your history, not a folder of papers.</h3>
+        <ul class="split-list">
+          <li><span class="tick">✓</span> Collect records from every provider in one place</li>
+          <li><span class="tick">✓</span> Verify AI-extracted information before it's used</li>
+          <li><span class="tick">✓</span> Share exactly what you choose, for a limited time</li>
+          <li><span class="tick">✓</span> See who has access — and revoke it instantly</li>
+        </ul>
+        <a class="btn btn-ghost btn-sm" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff" href="/login">Explore the patient demo <span class="arrow-dot">→</span></a>
+      </div>
+      <div class="card split-card light-mint reveal d1" id="providers">
+        <p class="eyebrow">For providers</p>
+        <h3 style="font-size:1.6rem">See a useful clinical snapshot in seconds.</h3>
+        <ul class="split-list">
+          <li><span class="tick" style="color:var(--primary)">✓</span> Scan a patient QR or enter an access code</li>
+          <li><span class="tick" style="color:var(--primary)">✓</span> Allergies, medicines and recent tests at a glance</li>
+          <li><span class="tick" style="color:var(--primary)">✓</span> Trace every summarized item to its source document</li>
+          <li><span class="tick" style="color:var(--primary)">✓</span> Simple enough for a small clinic, no training needed</li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="/login">Explore the provider demo <span class="arrow-dot">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI ORGANIZATION ================= -->
+<section class="section">
+  <div class="container showcase">
+    <div class="reveal">
+      <div class="card flat" style="padding:1.6rem;border-radius:var(--radius-lg)">
+        <div class="ai-steps" style="margin:0 0 1rem">
+          <div class="ai-step done"><svg class="check-pop" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4 10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg> Uploading document…</div>
+          <div class="ai-step done"><svg class="check-pop" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4 10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg> Reading document…</div>
+          <div class="ai-step done"><svg class="check-pop" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4 10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg> Extracting medical information…</div>
+          <div class="ai-step done"><svg class="check-pop" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4 10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg> Organizing information…</div>
+          <div class="ai-step on"><span class="spin"></span> Ready for verification</div>
+        </div>
+        <div class="banner info"><span>🧠</span><span><b>AI extracted information — please verify before using.</b> Every item links back to the original document.</span></div>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <p class="eyebrow">AI organization</p>
+      <h2 class="h2">Documents in. Structured information out — with human verification.</h2>
+      <p class="lead mt-2">CareVault uses AI to extract, organize and summarize information from your records. Nothing is treated as truth until <b>you</b> confirm it.</p>
+      <ul class="checklist">
+        <li class="check-item"><span class="ci">✓</span><div><b>Extract</b><div class="small muted">Medicines, doses, tests, results, providers and dates.</div></div></li>
+        <li class="check-item"><span class="ci">✓</span><div><b>Verify</b><div class="small muted">Confirm, edit or reject every detected item.</div></div></li>
+        <li class="check-item"><span class="ci">✓</span><div><b>Trace</b><div class="small muted">Every summarized item shows its source document.</div></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSENT & CONTROL ================= -->
+<section class="section soft">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Consent &amp; control</p>
+      <h2 class="h2 reveal d1">Sharing that starts and stops when you say so.</h2>
+      <p class="lead reveal d2">Generate a secure QR, see exactly who is asking for what and why, grant time-limited access — and revoke it the moment you want.</p>
+    </div>
+    <div class="stats-band reveal">
+      <div class="stat-big"><div class="n" data-count="100" data-suffix="%">0%</div><div class="l">Patient-initiated sharing — providers can't browse records</div></div>
+      <div class="stat-big"><div class="n" data-count="15">0</div><div class="l">Minimum access window in minutes — you choose the duration</div></div>
+      <div class="stat-big"><div class="n" data-count="1">0</div><div class="l">Tap to revoke — access ends immediately on the backend</div></div>
+      <div class="stat-big"><div class="n" data-count="0">0</div><div class="l">Health data stored inside the QR code itself</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECURITY ================= -->
+<section class="section dark" id="security">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--accent)">Security center</p>
+      <h2 class="h2 reveal d1" style="color:#fff">Your Data. Your Control.</h2>
+      <p class="lead reveal d2" style="color:#9cc3bb">CareVault is designed around consent, not convenience shortcuts. Security is a set of behaviors, not a slogan.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="card sec-card reveal" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">🤝</div><h4 style="color:#fff">Consent-based sharing</h4><p style="color:#9cc3bb">Nothing is shared until you explicitly approve a specific request.</p></div>
+      <div class="card sec-card reveal d1" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">⏳</div><h4 style="color:#fff">Access expiration</h4><p style="color:#9cc3bb">Every grant has a time limit, enforced by the server.</p></div>
+      <div class="card sec-card reveal d2" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">🚫</div><h4 style="color:#fff">Instant revocation</h4><p style="color:#9cc3bb">Revoke any active session; provider access is blocked immediately.</p></div>
+      <div class="card sec-card reveal d3" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">📜</div><h4 style="color:#fff">Audit logs</h4><p style="color:#9cc3bb">Every request, view and revocation is recorded and visible to you.</p></div>
+      <div class="card sec-card reveal" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">🔐</div><h4 style="color:#fff">Secure authentication</h4><p style="color:#9cc3bb">Hashed credentials and role-based sessions.</p></div>
+      <div class="card sec-card reveal d1" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">👥</div><h4 style="color:#fff">Role-based access</h4><p style="color:#9cc3bb">Patients, providers and admins each see only what they should.</p></div>
+      <div class="card sec-card reveal d2" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">🔍</div><h4 style="color:#fff">Source traceability</h4><p style="color:#9cc3bb">AI summaries always point back to original documents.</p></div>
+      <div class="card sec-card reveal d3" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)"><div class="si" style="background:rgba(18,176,145,.18);color:#4fe0c0">🛡️</div><h4 style="color:#fff">Encrypted communication</h4><p style="color:#9cc3bb">Transport-layer encryption for all client–server traffic.</p></div>
+    </div>
+    <p class="text-center small mt-4" style="color:#7ea39b">CareVault is a consent and experience layer. It is not a diagnostic system and does not make medical decisions.</p>
+  </div>
+</section>
+
+<!-- ================= ASSISTED ACCESS ================= -->
+<section class="section">
+  <div class="container showcase">
+    <div class="reveal">
+      <p class="eyebrow">Assisted access</p>
+      <h2 class="h2">No smartphone? No problem.</h2>
+      <p class="lead mt-2">For patients with limited digital access, a provider can open <b>Assisted Patient Access</b>. The patient's identity is verified, the patient explicitly approves on screen, and temporary authorized access is granted — the patient still controls everything.</p>
+      <ul class="checklist">
+        <li class="check-item"><span class="ci">1</span><div><b>Identity check</b><div class="small muted">Name or ABHA number confirms the right patient.</div></div></li>
+        <li class="check-item"><span class="ci">2</span><div><b>Explicit approval</b><div class="small muted">The patient taps "I approve" — nothing is shown before.</div></div></li>
+        <li class="check-item"><span class="ci">3</span><div><b>Temporary access</b><div class="small muted">Time-limited and revocable, like every CareVault session.</div></div></li>
+      </ul>
+    </div>
+    <div class="reveal d1">
+      <div class="card flat" style="padding:1.8rem;border-radius:var(--radius-lg)">
+        <div class="row between mb-2"><b>Assisted Patient Access</b><span class="badge info">Clinic mode</span></div>
+        <div class="field"><label>Patient name or ABHA number</label><input value="Meena Devi" readonly></div>
+        <div class="notif-item" style="background:var(--soft)">
+          <span class="avatar">MD</span>
+          <div style="flex:1"><b>Meena Devi</b><div class="small muted">63 · Female · ABHA XX-XXXX-XXXX-5678</div></div>
+          <span class="badge ok">Match</span>
+        </div>
+        <div class="banner ok mt-2"><span>✅</span><span>Patient present — approval captured on this device. Access granted for 1 hour.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLATFORM CAPABILITIES ================= -->
+<section class="section soft" id="about">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Platform capabilities</p>
+      <h2 class="h2 reveal d1">A last-mile experience layer for digital health.</h2>
+      <p class="lead reveal d2">CareVault is designed to work alongside ABDM/ABHA infrastructure — never to replace it. It's the human layer on top: organization, verification, consent and continuity.</p>
+    </div>
+    <div class="split">
+      <div class="card split-card reveal">
+        <h3 style="font-size:1.3rem">🇮🇳 ABHA-ready by design</h3>
+        <p class="muted mt-2">Profiles can link an ABHA number. The backend is structured so live ABDM integration can be plugged in when credentials are available. The demo uses a clearly-labeled mock integration.</p>
+      </div>
+      <div class="card split-card reveal d1">
+        <h3 style="font-size:1.3rem">📶 Built for real networks</h3>
+        <p class="muted mt-2">Lightweight pages, compressed responses and a connection indicator keep CareVault usable on slow mobile networks — where much of healthcare actually happens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="h2 reveal d1">Questions people ask us.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">Does CareVault replace ABDM or ABHA? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><div class="faq-a"><p>No. CareVault is a patient/provider experience layer designed to work with ABDM/ABHA infrastructure, not to replace it.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can a provider see my records without my consent? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><div class="faq-a"><p>No. Providers can only request access. Nothing is shown until you explicitly approve — and the backend enforces this on every request.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What happens when I revoke access? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><div class="faq-a"><p>Access ends immediately. The provider's view switches to an "Access Revoked" screen and further API requests fail. The event is recorded in your audit log.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Does the QR code contain my medical data? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><div class="faq-a"><p>Never. The QR contains only a temporary, opaque session code. Your information stays on the server behind your consent.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is the AI making medical decisions? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><div class="faq-a"><p>No. AI only extracts, organizes and summarizes information from documents. Everything is marked for verification and must be confirmed by you. CareVault is not a diagnostic system.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is this prototype connected to the live ABDM system? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><div class="faq-a"><p>No — the ABHA connection in this prototype is a clearly-labelled demo integration. The backend is designed so real ABDM integration can be added later.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section" style="padding-top:1rem">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="inner">
+        <h2>The patient is in control.</h2>
+        <p>Experience the full consent flow — generate a QR, grant access as a patient, view the clinical snapshot as a provider, then revoke it. All in the interactive demo.</p>
+        <div class="row center" style="gap:.9rem;flex-wrap:wrap">
+          <a class="btn btn-lg" style="background:#fff;color:var(--ink)" href="/login">Open the demo <span class="arrow-dot">→</span></a>
+          <a class="btn btn-lg" style="border-color:rgba(255,255,255,.4);color:#fff" href="#how">See how it works</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:#fff;margin-bottom:1rem">
+          <span class="brand-mark"><svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 4l9 4v7c0 6-3.9 10.2-9 11.6C10.9 25.2 7 21 7 15V8l9-4z" stroke="#fff" stroke-width="2.4"/><path d="M11.5 16.2h2.4l1.3-3 2.2 5.6 1.4-2.6h2" stroke="#ffb45c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          CareVault
+        </div>
+        <p style="max-width:34ch;font-size:.94rem">Your Health. Your Records. Your Consent. A patient-controlled bridge between your health information and the people who care for you.</p>
+        <p class="small mt-3" style="color:#7ea39b">Prototype with demo data. Not a diagnostic system. ABHA integration shown is a demo mock.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#patients">For Patients</a></li>
+          <li><a href="#providers">For Providers</a></li>
+          <li><a href="#security">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Demo</h5>
+        <ul>
+          <li><a href="/login">Patient login</a></li>
+          <li><a href="/login?role=provider">Provider login</a></li>
+          <li><a href="/login?role=admin">Admin login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="#about">Platform capabilities</a></li>
+          <li><a href="#problem">The problem</a></li>
+          <li><a href="#home">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CareVault Prototype. Built for demonstration.</span>
+      <span>Consent-first · Source-traceable · Patient-controlled</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/landing.js"></script>
+</body>
+</html>

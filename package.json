@@ -1,0 +1,19 @@
+{
+  "name": "carevault",
+  "version": "1.0.0",
+  "description": "CareVault — Your Health. Your Records. Your Consent. A patient-controlled digital health record platform prototype.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "reseed": "node server/seed.js --force"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "compression": "^1.8.1",
+    "express": "^5.2.0",
+    "multer": "^2.0.2",
+    "qrcode": "^1.5.4"
+  }
+}
