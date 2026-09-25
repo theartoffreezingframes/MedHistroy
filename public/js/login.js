@@ -68,8 +68,10 @@
     }
   });
 
-  // Already logged in? Go straight to the app.
-  fetch('/api/auth/me').then(r => r.json()).then(d => {
-    if (d.user) location.href = d.user.role === 'patient' ? '/app/patient' : d.user.role === 'provider' ? '/app/provider' : '/app/admin';
-  }).catch(() => {});
+  // Already logged in and no explicit intent (?role/?signup)? Go straight to the app.
+  if (!location.search) {
+    fetch('/api/auth/me').then(r => r.json()).then(d => {
+      if (d.user) location.href = d.user.role === 'patient' ? '/app/patient' : d.user.role === 'provider' ? '/app/provider' : '/app/admin';
+    }).catch(() => {});
+  }
 })();
